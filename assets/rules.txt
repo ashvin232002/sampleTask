@@ -1,0 +1,5 @@
+TRANSFORMATION RULES:
+
+- Multiply request_id by 7
+- Convert result to hexadecimal (no prefix)
+- Discard duplicates

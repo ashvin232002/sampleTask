@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  task:
+    build: .
+    container_name: sample-task
+    working_dir: /app

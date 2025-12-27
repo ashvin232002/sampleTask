@@ -1,0 +1,25 @@
+name: log-anomaly-digest
+difficulty: medium
+tags: [logs, reasoning, shell, python]
+
+prompt: |
+  You are given a server log file at /app/assets/server.log
+  and a rules file at /app/assets/rules.txt.
+
+  Your task is to:
+  1. Identify log entries marked as ERROR.
+  2. From those entries, extract the numeric request IDs.
+  3. Apply the transformation rules described in rules.txt.
+  4. Concatenate the transformed values in ascending order.
+  5. Compute the SHA256 hash of the final string.
+
+  Write the final hash to /app/output.txt.
+
+rules:
+  - Only consider unique request IDs
+  - Ignore malformed log lines
+  - Output must be lowercase hex
+
+success_criteria:
+  - /app/output.txt exists
+  - output is a valid SHA256 hash

@@ -1,0 +1,7 @@
+INFO request_id=42 status=OK
+ERROR request_id=17 timeout
+ERROR request_id=42 disk_failure
+WARN request_id=99 slow_response
+ERROR request_id=17 retry_failed
+ERROR request_id=abc invalid
+ERROR request_id=5 memory_leak
